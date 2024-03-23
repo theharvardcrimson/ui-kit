@@ -4,16 +4,12 @@ import { type VariantProps, cva } from "class-variance-authority"
 import { Slot } from "@radix-ui/react-slot"
 import { twMerge } from "tailwind-merge"
 
-// Acknowledgement: This Button component draws heavy inspiration from shadcn/ui.
 const buttonVariants = cva(
-    "inline-flex items-center justify-center whitespace-nowrap rounded-lg ring-offset-current transition-colors",
+    "inline-flex items-center justify-center whitespace-nowrap rounded ring-offset-crimson transition-colors",
     {
         variants: {
             variant: {
-                default: "bg-red-200 text-black hover:bg-red-100/60",
-                outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-                ghost: "hover:bg-accent hover:text-accent-foreground",
-                link: "text-primary underline-offset-4 hover:underline",
+                default: "bg-crimson-700 text-white shadow-md hover:bg-crimson-800 disabled:pointer-events-none	disabled:bg-crimson-400",
             },
             size: {
                 default: "h-10 px-4 py-2",
